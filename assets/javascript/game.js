@@ -52,8 +52,8 @@ document.onkeyup = function(e){
 		else if (newWord.indexOf(letterGuess) > -1) {
 			for (var i = 0; i < newWord.length; i++) {
       			if (letterGuess === newWord[i]) {
-           			// underscores.slice(i, i+1) = letterGuess;
            			underscores = underscores.substring(0, i) + letterGuess + underscores.substring(i + 1);
+       				document.getElementById("word").innerHTML = underscores;
        			}
    			}		
 		}
